@@ -1,0 +1,21 @@
+*{
+  background-color:#F2E8C6;
+}
+#title-Heading{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color:#952323;
+  font-size: 100px;
+  font-family: 'Fuggles', cursive;
+}
+nav{
+  text-align: center;
+}
+nav a{
+  font-size: 2rem;
+  padding:30px;
+  text-decoration: none;
+  /* font-family: 'Fuggles', cursive; */
+  font-weight: 900;
+}
