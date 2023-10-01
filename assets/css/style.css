@@ -1,5 +1,6 @@
 *{
   background-color:#F2E8C6;
+  background-image: url(../images/footer-bg.jpg);
 }
 #title-Heading{
   text-align: center;
@@ -18,4 +19,13 @@ nav a{
   text-decoration: none;
   /* font-family: 'Fuggles', cursive; */
   font-weight: 900;
+}
+.nav-a:hover{
+  opacity:0.8;
+}
+.nav-a:active{
+  opacity:0.3;
+}
+.Main-Heading{
+  text-decoration: none;
 }
