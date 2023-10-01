@@ -19,6 +19,7 @@ nav a{
   text-decoration: none;
   /* font-family: 'Fuggles', cursive; */
   font-weight: 900;
+  transition: opacity 0.20s;
 }
 .nav-a:hover{
   opacity:0.8;
