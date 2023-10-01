@@ -1,4 +1,20 @@
-*{
+.body1{
+  background-color:#F2E8C6;
+  background-image: url(../images/footer-bg.jpg);
+}
+.body2{
+  background-color:#F2E8C6;
+  background-image: url(../images/hero-slider-1.jpg);
+}
+.body3{
+  background-color:#F2E8C6;
+  background-image: url(../images/hero-slider-2.jpg);
+}
+.body4{
+  background-color:#F2E8C6;
+  background-image: url(../images/hero-slider-3.jpg);
+}
+.body5{
   background-color:#F2E8C6;
   background-image: url(../images/footer-bg.jpg);
 }
@@ -9,9 +25,15 @@
   color:#952323;
   font-size: 100px;
   font-family: 'Fuggles', cursive;
+  margin-bottom:20px;
+  transition:font-size 0.80s;
+}
+#title-Heading:hover{
+  font-size:150px;
 }
 nav{
   text-align: center;
+  margin-bottom: 100px;
 }
 nav a{
   font-size: 2rem;
@@ -19,14 +41,106 @@ nav a{
   text-decoration: none;
   /* font-family: 'Fuggles', cursive; */
   font-weight: 900;
-  transition: opacity 0.20s;
+  transition: opacity 0.20s,font-size 0.20s;
+
 }
 .nav-a:hover{
   opacity:0.8;
+  font-size: 2.2rem;
+  color: #be1313;
 }
 .nav-a:active{
   opacity:0.3;
+  font-size: 1.9rem;
 }
 .Main-Heading{
   text-decoration: none;
 }
+.welcome{
+  font-size:3rem;
+  color:green;
+  text-align: center;
+  font-weight: bold;
+  font-family: lucida handwriting;
+  margin-bottom: 100px;
+  transition: font-size 0.80s;
+}
+.welcome:hover{
+  font-size: 3.5rem;
+}
+.intro{
+  font-size:2rem;
+  color:gold;
+  text-align: center;
+  /* font-weight: bold; */
+  font-family: lucida handwriting;
+  line-height: 60px;
+  transition:font-size 0.20s,font-weight 0.20s;
+  margin-bottom: 100px;
+  padding:10px 200px 10px;
+}
+.intro:hover{
+  font-size: 2.2rem;
+  font-weight: bold;
+  background-color: #F2E8C6;
+  color: #952323;
+}
+.query{
+  font-size:2rem;
+  color: #952323;
+  /* background-color: #F2E8C6; */
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:bold ;
+  text-align:center;
+  transition:font-size 0.80s;
+  text-decoration: none;
+  padding:10px;
+}
+.query:hover{
+  font-size: 36px;
+}
+.query:active{
+  font-size: 30px;
+}
+.footer-image{
+  height: 28%;
+  width: 28%;
+  margin: 40px 20px;
+  transition:height 0.80s,width 0.80s;
+}
+.footer-image:hover{
+  height:32%;
+  width: 32%;
+}
+.home-end{
+  text-align: center;
+  color: #F2E8C6;
+  font-size: 20px;
+  font-family: lucida handwriting;
+  transition: font-size 0.80s;
+}
+.home-end:hover{
+  font-size:30px;
+}
+#since-1950{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 20%;
+  height: 20%;
+  transition: width 0.80s,height 0.80s;
+}
+#since-1950:hover{
+  width: 25%;
+  height: 25%;
+  margin-top: 0px;
+}
+.about-heading{
+  font-size: 50px;
+  color:#d65f0a;
+  transition: font-size 0.50s;
+}
+.about-heading:hover{
+  font-size:60px
+}
+
