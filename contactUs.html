@@ -11,7 +11,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
-    
+    <style>
+        form 
+        {
+            width: 70%;
+            margin: auto;
+            font-family: Cursive;
+        }
+
+        .elem-group 
+        {
+            margin-bottom: 20px;
+        }
+
+        body 
+        { 
+            background-image: url(assets/images/IMgea.png);
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+        }
+
+        label 
+        {
+            display: block;
+            font-weight: italic;
+            margin-bottom: 5px;
+            color: rgb(14, 143, 147);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="message"],
+        textarea,
+        select 
+        {
+            width: 100%;
+            padding: 10px;
+            color: #789005;
+            border: 1px solid #ef1111;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] 
+        {
+            background-color: #007BFF;
+            color: #0c0a11;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+          
+        }
+
+        button[type="submit"]:hover 
+        {
+            background-color: #b00e47;
+        }
+
+        button[type="Return"] 
+        {
+            background-color: #007BFF;
+            color: #090505;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+         
+        }
+
+        button[type="Return"]:hover 
+        {
+            background-color: #b00e47;
+        }
+
+        .elem-group.inlined 
+        {
+            display: inline-block;
+            width: calc(33.33% - 10px);
+            margin-right: 20px;
+            vertical-align: top;
+        }
+
+        @media (max-width: 768px) 
+        {
+            .elem-group.inlined 
+            {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        #Darpa{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body class="body3">
     <header>
@@ -29,10 +128,32 @@
             Contact Us<img src="./assets/images/badge-1.png" height="50px" width="40px">
         </p>
         <p class="intro">
-        
+            <form>
+                <div class="elem-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="visitor_name" placeholder="Name..." pattern="[A-Za-z\s]{3,20}">
+                </div>
+                <div class="elem-group">
+                    <label for="email">Your E-mail</label>
+                    <input type="email" id="email" name="visitor_email" placeholder="Mail......">
+                </div>
+                <div class="elem-group">
+                    <label for="phone">Your Phone</label>
+                    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})">
+                </div>
+                <hr>
+                <div class="elem-group">
+                    <label for="message">Anything Else?</label>
+                    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important."></textarea>
+                </div>
+                <div id="Darpa">
+                    <button type="submit">Submit</button>
+                    <a href="index.html"><button type="Return">Back</button></a>
+                </div>
+            </form>
         </p>
         <p class="query">
-        </span><a href="./menu.html">Reserve your Table </a></span>
+        </span><a href="Reservation.html">Reserve your Table</a></span>
         </p>
         <img src="./assets/images/hero-slider-1.jpg" class="footer-image" style="margin-left: 70px;">
         <img src="./assets/images/hero-slider-2.jpg" 
