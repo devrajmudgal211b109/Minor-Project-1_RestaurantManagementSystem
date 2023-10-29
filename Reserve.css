@@ -1,0 +1,80 @@
+form 
+{
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.elem-group 
+{
+    margin-bottom: 20px;
+}
+
+body 
+{
+    background-image: url("C:\\Users\\saart\\OneDrive\\Desktop\\Astram\\Minor-1\\Images\\BAGUATEE.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+label 
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select 
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] 
+{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button[type="submit"]:hover 
+{
+    background-color: #0056b3;
+}
+
+hr 
+{
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.elem-group.inlined 
+{
+    display: inline-block;
+    width: calc(33.33% - 10px);
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+@media (max-width: 768px) 
+{
+    .elem-group.inlined 
+    {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
