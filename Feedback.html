@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <meta name="title" content="Hops and Chops">
-    <meta name="description" content="The Restaurants with Amazing Cuisine and Meals">
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg-xml">
+    <meta name="description" content="The Restaurant with Amazing Cuisine and Meals">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+    <style>
+        .feedback-section 
+        {
+            text-align: center;
+            background-color: #e3c609db; /* Add a background color if desired */
+            padding: 20px; /* Add padding for spacing */
+            border-radius: 10px; /* Add rounded corners if desired */
+        }
     
+        .feedback-form 
+        {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        /* Change the text color for labels, input fields, and textareas */
+        label, input, select, textarea 
+        {
+            color: blue; /* Change this color to the desired text color */
+        }
+    
+        /* Change the color of the <h2> element */
+        .feedback-section h2 
+        {
+            color: red; /* Change this color to the desired color for the <h2> element */
+        }
+    </style>    
 </head>
 <body class="body4">
     <header>
@@ -20,21 +47,45 @@
             <a href="./index.html" class="nav-a">Home</a>
             <a href="./aboutUs.html" class="nav-a">About Us</a>
             <a href="./menu.html" class="nav-a">Menu</a>
-            <a href="./Feedback.html" class="nav-a">Booking</a>
+            <a href="./Feedback.html" class="nav-a">Feedback</a>
             <a href="./contactUs.html" class="nav-a">Contact Us</a>
         </nav>
     </header>
     <div>
         <p class="welcome">
-            Book The Table<img src="./assets/images/badge-1.png" height="50px" width="40px" style="margin-left: 20px;">
+            Customer Vichar<img src="./assets/images/badge-1.png" height="50px" width="40px" style="margin-left: 20px;">
         </p>
         <p class="intro">
-
+            Welcome to Hops And Chops! Share your feedback with us.
         </p>
-       
+        <!-- Feedback Form Section -->
+        <section class="feedback-section">
+            <h2>Feedback Form</h2>
+            <form action="submit_feedback.php" method="post" class="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="3">3 - Good</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="1">1 - Poor</option>
+                </select><br><br>
+
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
         <img src="./assets/images/hero-slider-1.jpg" class="footer-image" style="margin-left: 70px;">
-        <img src="./assets/images/hero-slider-2.jpg" 
-        class="footer-image">
+        <img src="./assets/images/hero-slider-2.jpg" class="footer-image">
         <img src="./assets/images/hero-slider-3.jpg" class="footer-image" style="text-align: right;">
         <p class="home-end">
             Join us for an unforgettable journey through taste.
