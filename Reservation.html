@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Reservation Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-        form 
-        {
+        form {
             width: 70%;
             margin: 0 auto;
             font-family: Cursive;
         }
 
-        .elem-group 
-        {
-            margin-bottom: 20px;
+        .elem-group {
+            margin-bottom: 25px;
         }
 
-        body 
-        {
-            background-image: url("assets/images/BAGUATEE.jpg"); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
-        }
 
-        label 
-        {
+
+        label {
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
@@ -37,8 +30,7 @@
         input[type="tel"],
         input[type="number"],
         textarea,
-        select 
-        {
+        select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -46,8 +38,7 @@
             font-size: 16px;
         }
 
-        button[type="submit"] 
-        {
+        button[type="submit"] {
             background-color: #007BFF;
             color: #fff;
             padding: 10px 20px;
@@ -57,86 +48,91 @@
             font-size: 18px;
         }
 
-        button[type="submit"]:hover 
-        {
+        button[type="submit"]:hover {
             background-color: #445f06;
         }
 
-        button[type="Return"] 
-        {
-            background-color: #2f0a66;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        button[type="Return"]:hover 
-        {
-            background-color: #027091;
-        }
-
-        hr 
-        {
+        hr {
             border: 1px solid #d54c4c;
-            margin: 20px 0;
+            margin: 20px auto;
         }
 
-        .elem-group.inlined 
-        {
+        .elem-group.inlined {
             display: inline-block;
             width: calc(33.33% - 10px);
             margin-right: 20px;
             vertical-align: top;
         }
 
-        @media (max-width: 768px) 
-        {
-            .elem-group.inlined 
-            {
+        @media (max-width: 768px) {
+            .elem-group.inlined {
                 width: 100%;
                 margin-right: 0;
                 margin-bottom: 10px;
             }
         }
+        h1{
+            color:green;
+            text-align: center;
+            text-decoration-line: underline;
+            
+        }
     </style>
 </head>
-<body>
-    <form>
+
+<body class="body1">
+    <header>
+        <a href="./index.html" class="Main-Heading">
+            <h1 id="title-Heading">Hops And Chops</h1>
+        </a>
+        <nav>
+            <a href="./index.html" class="nav-a">Home</a>
+            <a href="./aboutUs.html" class="nav-a">About Us</a>
+            <a href="./menu.html" class="nav-a">Menu</a>
+            <a href="./Feedback.html" class="nav-a">Booking</a>
+            <a href="./contactUs.html" class="nav-a">Contact Us</a>
+        </nav>
+    </header>
+    <hr style="width:100%">
+    <h1>Reservation Form</h1>
+    <hr style="width:70%">
+    <form method="post" action="">
         <div class="elem-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="visitor_name" placeholder="Ram" pattern="[A-Za-z\s]{3,20}" required>
+            <label for="name"></label>
+            <input type="text" id="name" name="visitor_name" placeholder="Your Name" pattern="[A-Za-z\s]{3,20}"
+                required>
         </div>
         <div class="elem-group">
-            <label for="email">Your E-mail</label>
-            <input type="email" id="email" name="visitor_email" placeholder="Rama.Easy@hotmail.com" required>
+            <label for="email"></label>
+            <input type="email" id="email" name="visitor_email" placeholder="Email" required>
         </div>
         <div class="elem-group">
-            <label for="phone">Your Phone</label>
-            <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required>
+            <label for="phone"></label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="Phone no."
+                pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required>
         </div>
         <hr>
         <div class="elem-group inlined">
-            <label for="adult">Adults</label>
-            <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            <label for="adult"></label>
+            <input type="number" id="adult" name="total_adults" placeholder="Adults" min="1" required>
         </div>
         <div class="elem-group inlined">
-            <label for="child">Children</label>
-            <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            <label for="child"></label>
+            <input type="number" id="child" name="total_children" placeholder="Children" min="0" required>
         </div>
         <div class="elem-group inlined">
-            <label for="checkin-date">Reservation Date</label>
+            <label for="checkin-date"></label>
             <input type="date" id="checkin-date" name="checkin" required>
         </div>
         <hr>
         <div class="elem-group">
             <label for="message">Anything Else?</label>
-            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important."
+                required></textarea>
         </div>
-        <button type="submit">Book The Seat</button>
-        <a href="index.html"><button type="Return">Back</button></a>
+        <button id="buttonsub" type="submit">Book The Seat</button>
+
     </form>
 </body>
+
 </html>
