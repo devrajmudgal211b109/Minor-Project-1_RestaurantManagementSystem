@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Firebase Authentication</title>
+</head>
+<body>
+    <div class="container">
+        <div id="user-auth">
+            <h2>Welcome</h2>
+            <p id="user-email"></p>
+            <button onclick="signOut()">Sign Out</button>
+        </div>
+
+        <div id="auth-forms">
+            <div id="sign-up-form" class="auth-form">
+                <h2>Sign Up</h2>
+                <form onsubmit="signUp(event)">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="signup-email" required>
+
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="signup-password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div id="sign-in-form" class="auth-form">
+                <h2>Sign In</h2>
+                <form onsubmit="signIn(event)">
+                    <label for="signin-email">Email:</label>
+                    <input type="email" id="signin-email" name="signin-email" required>
+
+                    <label for="signin-password">Password:</label>
+                    <input type="password" id="signin-password" name="signin-password" required>
+
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
