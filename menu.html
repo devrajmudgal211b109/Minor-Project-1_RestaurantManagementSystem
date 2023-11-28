@@ -12,6 +12,97 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="menu.css">
+    <style>
+        .menu-container 
+        {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .menu-categories 
+        {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-categories li 
+        {
+            margin: 0 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #680707;
+        }
+
+        .menu 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item 
+        {
+            text-align: center;
+            margin: 10px;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .item img 
+        {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .flavor 
+        {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .price 
+        {
+            color: #e44d26;
+            margin-bottom: 5px;
+        }
+
+        .item-text 
+        {
+            font-size: 16px;
+        }
+
+        .query 
+        {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        @media screen and (max-width: 768px) 
+        {
+            .menu-categories 
+            {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .menu-categories li 
+            {
+                margin: 10px 0;
+            }
+
+            .item 
+            {
+                max-width: 100%;
+            }
+        }
+    </style>
    
 </head>
 <body class="body5">
@@ -25,76 +116,113 @@
             <a href="./contactUs.html" class="nav-a">Contact Us</a>
         </nav>
     </header>
-    <div>
+    <div class="menu-container">
         <p class="welcome">
-            Menu<img src="./assets/images/badge-1.png" height="50px" width="40px">
+            Menu <img src="./assets/images/badge-1.png" height="50px" width="40px">
         </p>
-        <ul>
-            <li class="active">All</li>
-            <li>Breakfast</li>
-            <li>Lunch</li>
-            <li>Dinner</li>
+        <ul class="menu-categories">
+            <li class="filter-btn active" onclick="filterMenu('all')" data-category="all">All</li>
+            <li class="filter-btn" onclick="filterMenu('Breakfast')" data-category="Breakfast">Breakfast</li>
+            <li class="filter-btn" onclick="filterMenu('Lunch')" data-category="Lunch">Lunch</li>
+            <li class="filter-btn" onclick="filterMenu('Dinner')" data-category="Dinner">Dinner</li>
         </ul>
-
-
+    
         <div class="menu">
-            <div class="Breakfast">
+            <div class="item Breakfast">
                 <img src="./assets/images/coffee.jpg" alt="">
-                <article class="item">
-                    <p class="flavor">Coffee</p><p class="price">3.00</p>
+                <article>
+                    <p class="flavor">Coffee</p>
+                    <p class="price">$3.00</p>
                     <p class="item-text">A rich, full-bodied coffee with notes of chocolate and caramel, freshly ground and brewed to perfection for a satisfying sip. ☕</p>
                 </article>
             </div>
-            <div class="Breakfast">
+    
+            <div class="item Breakfast">
                 <img src="./assets/images/Rava Upma.jpeg" alt="">
-                <article class="item">
-                    <p class="flavor">Rava Upma</p><p class="price">3.00</p>
+                <article>
+                    <p class="flavor">Rava Upma</p>
+                    <p class="price">$3.00</p>
                     <p class="item-text">A wholesome South Indian breakfast dish made with semolina and aromatic spices, served hot and often enjoyed with chutney or sambar. A nutritious start to your day!</p>
                 </article>
             </div>
-            <div class="Lunch">
+    
+            <div class="item Lunch">
                 <img src="./assets/images/Aloo Paratha.jpeg" alt="">
-                <article class="item">
-                    <p class="flavor">Aloo Paratha</p><p class="price">3.00</p>
-                    <p class="item-text">A hearty Indian flatbread filled with a spiced potato mixture, served best with a dollop of yogurt and butter     . A Punjabi breakfast delight!</p>
+                <article>
+                    <p class="flavor">Aloo Paratha</p>
+                    <p class="price">$3.00</p>
+                    <p class="item-text">A hearty Indian flatbread filled with a spiced potato mixture, served best with a dollop of yogurt and butter. A Punjabi breakfast delight!</p>
                 </article>
             </div>
-            <div  class="Lunch"> 
+    
+            <div class="item Lunch">
                 <img src="./assets/images/Bhindi.jpeg" alt="">
-                <article class="item">
-                    <p class="flavor">Bhindi do Pyaza</p><p class="price">3.00</p>
+                <article>
+                    <p class="flavor">Bhindi do Pyaza</p>
+                    <p class="price">$3.00</p>
                     <p class="item-text">A traditional North Indian dish featuring okra and a double serving of onions, cooked with aromatic spices.</p>
                 </article>
             </div>
-            <div class="Dinner">
+    
+            <div class="item Dinner">
                 <img src="./assets/images/Chole Puri.jpeg" alt="">
-                <article class="item">
-                    <p class="flavor">Chole Puri</p><p class="price">3.00</p>
-                    <p class="item-text"> A popular North Indian dish, featuring fluffy deep-fried bread served with a spicy chickpea curry.</p>
+                <article>
+                    <p class="flavor">Chole Puri</p>
+                    <p class="price">$3.00</p>
+                    <p class="item-text">A popular North Indian dish, featuring fluffy deep-fried bread served with a spicy chickpea curry.</p>
                 </article>
             </div>
-             <div class="Lunch">
+    
+            <div class="item Lunch">
                 <img src="./assets/images/Carrot Juice.jpeg" alt="">
-                <article class="item">
-                    <p class="flavor">Carrot Juice</p><p class="price">3.00</p>
-                    <p class="item-text">A refreshing and nutritious beverage, rich in provitamin A and packed with a sweet flavor that pairs well with many fruits and vegetables</p>
+                <article>
+                    <p class="flavor">Carrot Juice</p>
+                    <p class="price">$3.00</p>
+                    <p class="item-text">A refreshing and nutritious beverage, rich in provitamin A and packed with a sweet flavor that pairs well with many fruits and vegetables.</p>
                 </article>
             </div>
-        
-
         </div>
+    
         <p class="query">
-        </span><a href="Reservation.html">Reserve your Table</a></span>
+            <a href="Reservation.html">Reserve your Table</a>
         </p>
+    
         <img src="./assets/images/hero-slider-1.jpg" class="footer-image" style="margin-left: 70px;">
-        <img src="./assets/images/hero-slider-2.jpg" 
-        class="footer-image">
+        <img src="./assets/images/hero-slider-2.jpg" class="footer-image">
         <img src="./assets/images/hero-slider-3.jpg" class="footer-image" style="text-align: right;">
         <p class="home-end">
             Join us for an unforgettable journey through taste.
         </p>
-    </div>
 
-    
+        <script>
+            function filterMenu(category) 
+            {
+                const items = document.querySelectorAll('.item');
+                
+                items.forEach(item => 
+                {
+                    const itemCategory = item.classList[1]; 
+
+                    if (category === 'all' || itemCategory === category) 
+                    {
+                        item.style.display = 'block';
+                    } 
+                    else 
+                    {
+                        item.style.display = 'none';
+                    }
+                });
+
+                const buttons = document.querySelectorAll('.filter-btn');
+                buttons.forEach(button => 
+                {
+                    button.classList.remove('active');
+                });
+                
+                const activeButton = document.querySelector(`.filter-btn[data-category="${category}"]`);
+                activeButton.classList.add('active');
+            }
+        </script>
+    </div>
 </body>
 </html>
