@@ -5,22 +5,23 @@
   padding: 0;
 }
 
-form {
+#newDiv {
   text-align: center;
   width: 70%;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 39px;
   background: linear-gradient(to right, blue, purple);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;
   padding: 20px;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 input,
 button {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 button {
@@ -81,3 +82,4 @@ input[type="password"] {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
