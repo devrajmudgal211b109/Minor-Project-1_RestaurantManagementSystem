@@ -27,6 +27,7 @@
   font-family: 'Fuggles', cursive;
   margin-bottom:20px;
   transition:font-size 0.80s;
+  text-decoration: none;
 }
 #title-Heading:hover{
   font-size:150px;
